@@ -33,6 +33,11 @@
             android:label="@string/title_activity_debug"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".scroller.ScollerActivity"
+            android:label="@string/title_activity_scoller"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

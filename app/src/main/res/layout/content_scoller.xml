@@ -10,24 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main"
-    tools:context=".MainActivity">
+    tools:showIn="@layout/activity_scoller"
+    tools:context="com.ht.androidstudy.scroller.ScollerActivity">
 
-    <Button
-        android:id="@+id/btn_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="自定义view"
+    <com.ht.androidstudy.scroller.ScrollerDragView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         />
-
-
-    <Button
-        android:id="@+id/btn_scoller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="scoller"
-        android:layout_below="@id/btn_view"
-        />
-
 
 </RelativeLayout>
