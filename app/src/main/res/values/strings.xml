@@ -5,4 +5,6 @@
     <string name="title_activity_my_scroll_view">MyScrollViewActivity</string>
     <string name="title_activity_debug">DebugActivity</string>
     <string name="title_activity_scoller">ScollerActivity</string>
+    <string name="title_activity_scroller_layout">ScrollerLayoutActivity</string>
+    <string name="title_activity_palette">PaletteActivity</string>
 </resources>

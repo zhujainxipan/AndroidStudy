@@ -1,4 +1,4 @@
-package com.ht.androidstudy.view;
+package com.ht.androidstudy.scroller;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -13,6 +13,7 @@ import android.widget.Scroller;
 /**
  * Created by niehongtao on 16/5/31.
  * 每个子布局占满一屏，滑动的时候再取第二个子布局
+ * 这里也是少用scroller实现的
  */
 public class MyScrollView extends ViewGroup {
     private int mScreenHeight;

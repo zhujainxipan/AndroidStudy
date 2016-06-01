@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ht.androidstudy.scroller.ScollerActivity;
+import com.ht.androidstudy.scroller.ScrollerLayoutActivity;
 import com.ht.androidstudy.view.ViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ScollerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btn_scollerlayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ScrollerLayoutActivity.class);
                 startActivity(intent);
             }
         });

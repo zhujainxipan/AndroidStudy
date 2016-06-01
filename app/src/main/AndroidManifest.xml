@@ -38,6 +38,16 @@
             android:label="@string/title_activity_scoller"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".scroller.ScrollerLayoutActivity"
+            android:label="@string/title_activity_scroller_layout"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".fiveversion.PaletteActivity"
+            android:label="@string/title_activity_palette"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
