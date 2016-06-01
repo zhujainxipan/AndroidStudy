@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <com.ht.androidstudy.view.DebugTextView
+        android:id="@+id/debugView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="dddd"
