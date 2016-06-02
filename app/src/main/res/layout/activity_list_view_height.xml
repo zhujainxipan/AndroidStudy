@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+    <com.ht.androidstudy.meituanxuanting.ListViewHeight
+        android:id="@+id/lv_height"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></com.ht.androidstudy.meituanxuanting.ListViewHeight>
+
+
+    <EditText
+        android:id="@+id/search_edit_fake"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:hint="请输入..."
+        android:padding="5dip"
+        android:singleLine="true"
+        android:textColorHint="#AAAAAA"
+        android:visibility="invisible"
+        android:textSize="15dp" />
+
+</RelativeLayout>

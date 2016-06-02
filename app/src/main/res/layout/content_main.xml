@@ -55,4 +55,14 @@
         android:layout_below="@id/btn_dialogfragment_test"
         />
 
+
+    <Button
+        android:id="@+id/btn_lv_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="listview 悬停测量"
+        android:layout_below="@id/btn_scroll_view_height"
+        />
+
+
 </RelativeLayout>

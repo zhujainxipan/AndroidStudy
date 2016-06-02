@@ -53,6 +53,11 @@
             android:label="@string/title_activity_scroll_height_view"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".meituanxuanting.ListViewHeightActivity"
+            android:label="@string/title_activity_list_view_height"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

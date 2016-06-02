@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.ht.androidstudy.dialog.DialogFragmentTest;
 import com.ht.androidstudy.dialog.DialogFragmentTestDemo;
+import com.ht.androidstudy.meituanxuanting.ListViewHeightActivity;
 import com.ht.androidstudy.meituanxuanting.ScrollHeightViewActivity;
 import com.ht.androidstudy.scroller.ScollerActivity;
 import com.ht.androidstudy.scroller.ScrollerLayoutActivity;
@@ -91,6 +92,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ScrollHeightViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        findViewById(R.id.btn_lv_height).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListViewHeightActivity.class);
                 startActivity(intent);
             }
         });

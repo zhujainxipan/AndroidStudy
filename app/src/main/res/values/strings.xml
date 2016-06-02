@@ -8,4 +8,5 @@
     <string name="title_activity_scroller_layout">ScrollerLayoutActivity</string>
     <string name="title_activity_palette">PaletteActivity</string>
     <string name="title_activity_scroll_height_view">ScrollHeightViewActivity</string>
+    <string name="title_activity_list_view_height">ListViewHeightActivity</string>
 </resources>
