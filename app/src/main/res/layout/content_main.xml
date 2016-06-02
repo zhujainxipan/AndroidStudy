@@ -38,4 +38,12 @@
         android:layout_below="@id/btn_view"
         />
 
+    <Button
+        android:id="@+id/btn_dialogfragment_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialogfragment"
+        android:layout_below="@id/btn_scollerlayout"
+        />
+
 </RelativeLayout>
