@@ -64,5 +64,15 @@
         android:layout_below="@id/btn_scroll_view_height"
         />
 
+    <Button
+        android:id="@+id/btn_dropmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dropmenu 下拉筛选框"
+        android:layout_below="@id/btn_lv_height"
+        />
+
+
+
 
 </RelativeLayout>
