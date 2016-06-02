@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.ht.androidstudy.dialog.DialogFragmentTest;
 import com.ht.androidstudy.dialog.DialogFragmentTestDemo;
+import com.ht.androidstudy.meituanxuanting.ScrollHeightViewActivity;
 import com.ht.androidstudy.scroller.ScollerActivity;
 import com.ht.androidstudy.scroller.ScrollerLayoutActivity;
 import com.ht.androidstudy.view.ViewActivity;
@@ -81,6 +82,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 instance.show(getFragmentManager(), DialogFragmentTest.DIALOGFRAGMENTTEST);
+            }
+        });
+
+
+
+        findViewById(R.id.btn_scroll_view_height).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ScrollHeightViewActivity.class);
+                startActivity(intent);
             }
         });
     }

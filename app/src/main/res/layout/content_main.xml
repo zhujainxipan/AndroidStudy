@@ -46,4 +46,13 @@
         android:layout_below="@id/btn_scollerlayout"
         />
 
+
+    <Button
+        android:id="@+id/btn_scroll_view_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scrollveiw 悬停测量"
+        android:layout_below="@id/btn_dialogfragment_test"
+        />
+
 </RelativeLayout>
