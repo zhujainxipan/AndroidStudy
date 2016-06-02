@@ -10,6 +10,8 @@ import android.widget.ListView;
  */
 public class ListViewHeight extends ListView{
     private OnScrollChangedListener onScrollListener;
+
+    // 必须的使用全局记住才行，不能写在方法里面
     private int headerHeight;
 
 
@@ -54,7 +56,7 @@ public class ListViewHeight extends ListView{
      * @return
      */
     private int getLvScrollY() {
-        // 方案1
+        // 方案1 可行，也比较容易理解
         View c = this.getChildAt(0);//这里拿到的是可见部分的第一个View
         if (c == null) {
             return 0;
@@ -75,7 +77,7 @@ public class ListViewHeight extends ListView{
 
         return scrollY;
 
-        // 方案2
+        // 方案2，可行是可行，但是比较难理解
 //        View view = this.getChildAt(0);
 //        if (view  == null) {
 //            return 0;
