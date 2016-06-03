@@ -41,6 +41,16 @@ public class SimpleActivity extends AppCompatActivity {
                 button1.startAnimation(animation);
             }
         });
+
+        // 旋转动画
+        final Button button2 = (Button) findViewById(R.id.btn2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_2);
+                button2.startAnimation(animation);
+            }
+        });
     }
 
 }
