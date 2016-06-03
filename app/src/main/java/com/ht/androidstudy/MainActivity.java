@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import com.ht.androidstudy.animation.simple.SimpleActivity;
 import com.ht.androidstudy.dialog.DialogFragmentTest;
 import com.ht.androidstudy.dialog.DialogFragmentTestDemo;
 import com.ht.androidstudy.dropmenu.demo1.DropDownMenuActivity;
@@ -109,6 +111,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DropDownMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btn_animation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SimpleActivity.class);
                 startActivity(intent);
             }
         });

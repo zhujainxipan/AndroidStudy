@@ -10,4 +10,5 @@
     <string name="title_activity_scroll_height_view">ScrollHeightViewActivity</string>
     <string name="title_activity_list_view_height">ListViewHeightActivity</string>
     <string name="title_activity_drop_down_menu">DropDownMenuActivity</string>
+    <string name="title_activity_simple">SimpleActivity</string>
 </resources>

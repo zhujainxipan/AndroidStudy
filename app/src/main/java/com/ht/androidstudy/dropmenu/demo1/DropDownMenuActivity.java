@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ht.androidstudy.R;
+import com.ht.androidstudy.dropmenu.demo2.DropDownMenuMe;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +24,8 @@ import butterknife.InjectView;
 public class DropDownMenuActivity extends Activity {
     @InjectView(R.id.dropDownMenu)
     DropDownMenu mDropDownMenu;
+    @InjectView(R.id.dropDownMenuMe)
+    DropDownMenuMe mDropDownMenuMe;
     private String headers[] = {"城市", "年龄", "性别", "星座"};
     private List<View> popupViews = new ArrayList<>();
 
@@ -43,10 +46,97 @@ public class DropDownMenuActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drop_down_menu);
         ButterKnife.inject(this);
-        initView();
+//        initView1();
+        initView2();
     }
 
-    private void initView() {
+    private void initView2() {
+        //init city menu
+        final ListView cityView = new ListView(this);
+        cityAdapter = new GirdDropDownAdapter(this, Arrays.asList(citys));
+        cityView.setDividerHeight(0);
+        cityView.setAdapter(cityAdapter);
+
+        //init age menu
+        final ListView ageView = new ListView(this);
+        ageView.setDividerHeight(0);
+        ageAdapter = new ListDropDownAdapter(this, Arrays.asList(ages));
+        ageView.setAdapter(ageAdapter);
+
+        //init sex menu
+        final ListView sexView = new ListView(this);
+        sexView.setDividerHeight(0);
+        sexAdapter = new ListDropDownAdapter(this, Arrays.asList(sexs));
+        sexView.setAdapter(sexAdapter);
+
+        //init constellation
+        final View constellationView = getLayoutInflater().inflate(R.layout.custom_layout, null);
+        GridView constellation = ButterKnife.findById(constellationView, R.id.constellation);
+        constellationAdapter = new ConstellationAdapter(this, Arrays.asList(constellations));
+        constellation.setAdapter(constellationAdapter);
+        TextView ok = ButterKnife.findById(constellationView, R.id.ok);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDropDownMenuMe.setTabText(constellationPosition == 0 ? headers[3] : constellations[constellationPosition]);
+                mDropDownMenuMe.closeMenu();
+            }
+        });
+
+        //init popupViews
+        popupViews.add(cityView);
+        popupViews.add(ageView);
+        popupViews.add(sexView);
+        popupViews.add(constellationView);
+
+        //add item click event
+        cityView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                cityAdapter.setCheckItem(position);
+                mDropDownMenuMe.setTabText(position == 0 ? headers[0] : citys[position]);
+                mDropDownMenuMe.closeMenu();
+            }
+        });
+
+        ageView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ageAdapter.setCheckItem(position);
+                mDropDownMenuMe.setTabText(position == 0 ? headers[1] : ages[position]);
+                mDropDownMenuMe.closeMenu();
+            }
+        });
+
+        sexView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                sexAdapter.setCheckItem(position);
+                mDropDownMenuMe.setTabText(position == 0 ? headers[2] : sexs[position]);
+                mDropDownMenuMe.closeMenu();
+            }
+        });
+
+        constellation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                constellationAdapter.setCheckItem(position);
+                constellationPosition = position;
+            }
+        });
+
+        //init context view
+        TextView contentView = new TextView(this);
+        contentView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        contentView.setText("内容显示区域");
+        contentView.setGravity(Gravity.CENTER);
+        contentView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+
+        //init dropdownview
+        mDropDownMenuMe.setDropDownMenu(Arrays.asList(headers), popupViews, contentView);
+    }
+
+    private void initView1() {
         //init city menu
         final ListView cityView = new ListView(this);
         cityAdapter = new GirdDropDownAdapter(this, Arrays.asList(citys));
