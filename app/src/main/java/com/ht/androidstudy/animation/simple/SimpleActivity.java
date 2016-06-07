@@ -84,6 +84,15 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
+        // 位移、渐变动画 到简单动画11了
+        findViewById(R.id.btn21).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_6);
+                linearLayout.startAnimation(animation);
+            }
+        });
+
 
 
     }
