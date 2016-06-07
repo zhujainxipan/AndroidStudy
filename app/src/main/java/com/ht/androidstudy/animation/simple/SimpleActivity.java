@@ -75,6 +75,16 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
+        // 渐变、缩放、旋转动画
+        findViewById(R.id.btn11).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_5);
+                linearLayout.startAnimation(animation);
+            }
+        });
+
+
 
     }
 
