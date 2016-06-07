@@ -84,7 +84,7 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
-        // 位移、渐变动画 到简单动画11了
+        // 位移、渐变动画
         findViewById(R.id.btn21).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
