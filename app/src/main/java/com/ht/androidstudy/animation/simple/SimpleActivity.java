@@ -93,6 +93,15 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
+        // 从右移动进来动画
+        findViewById(R.id.btn31).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_7);
+                linearLayout.startAnimation(animation);
+            }
+        });
+
 
 
     }
