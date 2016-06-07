@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.ht.androidstudy.R;
 
@@ -30,6 +31,8 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
+        final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.ll);
+
 
         // 简单动画，渐变
         // xml实现
@@ -38,7 +41,7 @@ public class SimpleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_1);
-                button1.startAnimation(animation);
+                linearLayout.startAnimation(animation);
             }
         });
 
@@ -48,7 +51,7 @@ public class SimpleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_2);
-                button2.startAnimation(animation);
+                linearLayout.startAnimation(animation);
             }
         });
 
@@ -58,7 +61,7 @@ public class SimpleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_3);
-                button3.startAnimation(animation);
+                linearLayout.startAnimation(animation);
             }
         });
 
@@ -68,7 +71,7 @@ public class SimpleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_4);
-                button4.startAnimation(animation);
+                linearLayout.startAnimation(animation);
             }
         });
 

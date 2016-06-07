@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
 /**
@@ -38,5 +39,12 @@ public class DebugTextView extends TextView {
     protected void onDraw(Canvas canvas) {
         Log.d("dd", "");
         super.onDraw(canvas);
+    }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d("dd", "");
+        return super.onTouchEvent(event);
     }
 }
