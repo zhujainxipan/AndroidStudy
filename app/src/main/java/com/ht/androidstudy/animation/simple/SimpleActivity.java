@@ -102,6 +102,14 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
+        // 从最小放大，动画
+        findViewById(R.id.btn41).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_8);
+                linearLayout.startAnimation(animation);
+            }
+        });
 
 
     }
