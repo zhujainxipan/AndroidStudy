@@ -2,11 +2,13 @@
 
 输出android开发过程中的一些写的demo和做的试验
 
-实现了，listview和scrollview滚动悬浮停止的效果，一些参考资料如下：
+1.自定义view的学习
 
-http://my.oschina.net/u/1177694/blog/504992
+2.dialogfragment
 
-http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0924/1711.html
+3.滑动悬停效果
 
-http://www.cnblogs.com/Jabba93/p/4059497.html
+4.动画
+
+5.下拉筛选菜单
 
