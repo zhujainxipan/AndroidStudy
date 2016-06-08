@@ -73,6 +73,11 @@
             android:label="@string/title_activity_train"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".animation.ZakerActivity"
+            android:label="@string/title_activity_zaker"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

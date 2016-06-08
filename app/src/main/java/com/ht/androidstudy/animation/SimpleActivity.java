@@ -135,7 +135,8 @@ public class SimpleActivity extends AppCompatActivity {
         findViewById(R.id.btn211).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SimpleActivity.this, ZakerActivity.class);
+                startActivity(intent);
             }
         });
 

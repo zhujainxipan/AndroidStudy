@@ -12,4 +12,5 @@
     <string name="title_activity_drop_down_menu">DropDownMenuActivity</string>
     <string name="title_activity_simple">SimpleActivity</string>
     <string name="title_activity_train">TrainActivity</string>
+    <string name="title_activity_zaker">ZakerActivity</string>
 </resources>
