@@ -6,7 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -108,6 +110,23 @@ public class SimpleActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(SimpleActivity.this, R.anim.simple_8);
                 linearLayout.startAnimation(animation);
+            }
+        });
+
+
+        // 代码实现视图动画(视图动画不建议使用代码编写，动画重用性不高，实用性低)
+        findViewById(R.id.btn111).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AnimationSet animationSet = new AnimationSet(true);
+                // 每个动画效果，所带参数也各不相同，开发者需要自己查看开发文档
+                AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
+                // 设置动画时间
+                alphaAnimation.setDuration(3000);
+                // 将alphaAnimation加入到动画序列中
+                animationSet.addAnimation(alphaAnimation);
+                // 为某个控件View添加动画
+                linearLayout.startAnimation(animationSet);
             }
         });
 
