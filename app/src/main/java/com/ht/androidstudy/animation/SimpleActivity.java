@@ -1,6 +1,7 @@
 package com.ht.androidstudy.animation;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.ht.androidstudy.R;
@@ -173,8 +175,19 @@ public class SimpleActivity extends AppCompatActivity {
             }
         });
 
+        final ImageView imageView = (ImageView) findViewById(R.id.btn3111);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageView.setBackgroundResource(R.drawable.drawable_progress);
+                AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getBackground();
+                animationDrawable.start();
+            }
+        });
+
+
         // 上拉抽屉效果
-        findViewById(R.id.btn3111).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn4111).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

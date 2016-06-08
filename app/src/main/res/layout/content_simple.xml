@@ -150,11 +150,10 @@
             android:text="2"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/btn3111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"
             />
 
         <Button
