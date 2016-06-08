@@ -23,5 +23,36 @@
         android:drawable="@mipmap/market_loading_04"
         android:duration="100"
         />
+    <item
+        android:drawable="@mipmap/market_loading_05"
+        android:duration="100"
+        />
+
+    <item
+        android:drawable="@mipmap/market_loading_06"
+        android:duration="100"
+        />
+
+    <item
+        android:drawable="@mipmap/market_loading_07"
+        android:duration="100"
+        />
+
+    <item
+        android:drawable="@mipmap/market_loading_08"
+        android:duration="100"
+        />
+
+
+    <item
+        android:drawable="@mipmap/market_loading_09"
+        android:duration="100"
+        />
+
+    <item
+        android:drawable="@mipmap/market_loading_10"
+        android:duration="100"
+        />
+
 
 </animation-list>
