@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.Interpolator;
@@ -25,6 +26,8 @@ public class PullDoorView extends RelativeLayout {
     private int mScreenWidth = 0;
     private int mScreenHeigh = 0;
     private float mLastDownY;
+    // 这个参数是必须需要的
+    private boolean mCloseFlag = false;
 
     public PullDoorView(Context context) {
         super(context);
@@ -83,6 +86,7 @@ public class PullDoorView extends RelativeLayout {
                         //todo 这几个位置感觉理解起来有点问题
                         // 向上滑动超过半个屏幕高的时候，开启向上消失动画
                         startBounceAnim(this.getScrollY(), mScreenHeigh, 450);
+                        mCloseFlag = true;
                     } else {
                         // 向上滑动未超过半个屏幕高的时候，开启向下弹动动画
                         startBounceAnim(this.getScrollY(), -this.getScrollY(), 1000);
@@ -109,7 +113,9 @@ public class PullDoorView extends RelativeLayout {
             // 不要忘记更新界面
             postInvalidate();
         } else {
-
+            if (mCloseFlag) {
+                this.setVisibility(View.GONE);
+            }
         }
     }
 }
