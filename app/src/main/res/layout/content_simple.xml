@@ -15,7 +15,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_simple"
     android:orientation="vertical"
-    tools:context="com.ht.androidstudy.animation.simple.SimpleActivity">
+    tools:context="com.ht.androidstudy.animation.SimpleActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,6 +120,45 @@
 
         <Button
             android:id="@+id/btn411"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            />
+
+    </LinearLayout>
+
+
+
+    <!--第四排-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn1111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            />
+
+        <Button
+            android:id="@+id/btn2111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            />
+
+        <Button
+            android:id="@+id/btn3111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            />
+
+        <Button
+            android:id="@+id/btn4111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4"

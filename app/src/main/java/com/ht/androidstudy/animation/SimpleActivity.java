@@ -1,5 +1,6 @@
-package com.ht.androidstudy.animation.simple;
+package com.ht.androidstudy.animation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -127,6 +128,55 @@ public class SimpleActivity extends AppCompatActivity {
                 animationSet.addAnimation(alphaAnimation);
                 // 为某个控件View添加动画
                 linearLayout.startAnimation(animationSet);
+            }
+        });
+
+        //zaker风格动画实现
+        findViewById(R.id.btn211).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        // 火车票出票动画实现
+        findViewById(R.id.btn311).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SimpleActivity.this, TrainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 淘宝菜单效果
+        findViewById(R.id.btn411).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        // 腾讯安全雷达效果
+        findViewById(R.id.btn1111).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        // 高仿360首页动画效果
+        findViewById(R.id.btn2111).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        // 上拉抽屉效果
+        findViewById(R.id.btn3111).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

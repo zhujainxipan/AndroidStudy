@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.ht.androidstudy.animation.SimpleActivity">
+    tools:context="com.ht.androidstudy.animation.TrainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_simple"/>
+    <include layout="@layout/content_train"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

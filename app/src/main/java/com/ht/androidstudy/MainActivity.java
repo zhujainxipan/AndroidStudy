@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import com.ht.androidstudy.animation.simple.SimpleActivity;
+import com.ht.androidstudy.animation.SimpleActivity;
 import com.ht.androidstudy.dialog.DialogFragmentTest;
 import com.ht.androidstudy.dialog.DialogFragmentTestDemo;
 import com.ht.androidstudy.dropmenu.demo1.DropDownMenuActivity;

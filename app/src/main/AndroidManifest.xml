@@ -64,8 +64,13 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".animation.simple.SimpleActivity"
+            android:name=".animation.SimpleActivity"
             android:label="@string/title_activity_simple"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".animation.TrainActivity"
+            android:label="@string/title_activity_train"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
