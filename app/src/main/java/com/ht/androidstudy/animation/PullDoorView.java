@@ -83,9 +83,8 @@ public class PullDoorView extends RelativeLayout {
                 // 说明是上滑
                 if (offsetY < 0) {
                     if (Math.abs(offsetY) > mScreenHeigh / 2) {
-                        //todo 这几个位置感觉理解起来有点问题
                         // 向上滑动超过半个屏幕高的时候，开启向上消失动画
-                        startBounceAnim(this.getScrollY(), mScreenHeigh, 450);
+                        startBounceAnim(this.getScrollY(), mScreenHeigh + this.getScrollY() , 450);
                         mCloseFlag = true;
                     } else {
                         // 向上滑动未超过半个屏幕高的时候，开启向下弹动动画
@@ -98,9 +97,14 @@ public class PullDoorView extends RelativeLayout {
     }
 
 
-    // 推动门的动画
-    //todo ????
+    // 推动门的动画 !!!这里是使用scroller的重点也是难点所在
     public void startBounceAnim(int startY, int dy, int duration) {
+        // void android.widget.Scroller.startScroll(int startX, int startY, int dx, int dy, int duration)
+        // 第一个参数是起始移动的x坐标值，
+        // 第二个是起始移动的y坐标值，
+        // 第三个第四个参数都是移到某点的坐标值-初始的坐标值，即移动的距离值
+        // 而duration 当然就是执行移动的时间。
+        // getScrollY
         mScroller.startScroll(0, startY, 0, dy, duration);
         invalidate();
     }
