@@ -1,6 +1,7 @@
 package com.ht.androidstudy.animation;
 
 import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -272,6 +273,16 @@ public class SimpleActivity extends AppCompatActivity {
                 animSet.play(rotate).with(fadeInOut).after(moveIn);
                 animSet.setDuration(5000);
                 animSet.start();
+            }
+        });
+
+
+        findViewById(R.id.btn111111).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animator animator = AnimatorInflater.loadAnimator(SimpleActivity.this, R.animator.amima1);
+                animator.setTarget(linearLayout);
+                animator.start();
             }
         });
 
