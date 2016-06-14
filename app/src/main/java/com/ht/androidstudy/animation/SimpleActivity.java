@@ -1,5 +1,9 @@
 package com.ht.androidstudy.animation;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -193,6 +197,81 @@ public class SimpleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+
+
+
+        // 属性动画
+        final View view1 = findViewById(R.id.btn11111);
+        view1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObjectAnimator.ofInt(view1, "width", 500).setDuration(5000).start();
+            }
+        });
+
+
+        final View view2 = findViewById(R.id.btn21111);
+        final ObjectAnimator alpha = ObjectAnimator.ofFloat(view2, "alpha", 1f, 0f, 1f).setDuration(5000);
+        alpha.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+        alpha.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+            }
+        });
+        view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 这个过程中也是渐变的
+                alpha.start();
+            }
+        });
+
+
+        final View view3 = findViewById(R.id.btn31111);
+        final float curTranslationX = view3.getTranslationX();
+        view3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObjectAnimator.ofFloat(view3, "translationX", curTranslationX, -500f, curTranslationX).setDuration(5000).start();
+            }
+        });
+
+
+        final View view4 = findViewById(R.id.btn41111);
+        view4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObjectAnimator moveIn = ObjectAnimator.ofFloat(linearLayout, "translationX", -500f, 0f);
+                ObjectAnimator rotate = ObjectAnimator.ofFloat(linearLayout, "rotation", 0f, 360f);
+                ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(linearLayout, "alpha", 1f, 0f, 1f);
+                AnimatorSet animSet = new AnimatorSet();
+                animSet.play(rotate).with(fadeInOut).after(moveIn);
+                animSet.setDuration(5000);
+                animSet.start();
             }
         });
 
